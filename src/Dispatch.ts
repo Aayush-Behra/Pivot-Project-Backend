@@ -9,32 +9,25 @@ import handleVideoSearch from "./agents/videoSearchAgent.js";
 
 const dispatch = {
   webSearch: {
-    mode: "stream",
-    run: handleWebSearch,
+    mode: "stream",run: handleWebSearch,
   },
   academicSearch: {
-    mode: "stream",
-    run: handleAcademicSearch,
+    mode: "stream",run: handleAcademicSearch,
   },
   redditSearch: {
-    mode: "stream",
-    run: handleRedditSearch,
+    mode: "stream",run: handleRedditSearch,
   },
   youtubeSearch: {
-    mode: "stream",
-    run: handleYoutubeSearch,
+    mode: "stream",run: handleYoutubeSearch,
   },
   writingAssistant: {
-    mode: "stream",
-    run: handleWritingAssistant,
+    mode: "stream",run: handleWritingAssistant,
   },
   imageSearch: {
-    mode: "list",
-    run: handleImageSearch,
+    mode: "list",run: handleImageSearch,
   },
   videoSearch: {
-    mode: "list",
-    run: handleVideoSearch,
+    mode: "list",run: handleVideoSearch,
   },
 };
 
