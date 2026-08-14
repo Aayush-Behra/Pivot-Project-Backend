@@ -1,4 +1,6 @@
-export const handleStream = async (stream, emitter) => {
+import { EventEmitter } from "events";
+
+export const handleStream = async (stream: any, emitter: EventEmitter) => {
   for await (const event of stream) {
     if (event.event === "on_chain_end" && event.name === "FinalSourceRetriever") {
       emitter.emit("data", JSON.stringify({ type: "sources", data: event.data.output }));
