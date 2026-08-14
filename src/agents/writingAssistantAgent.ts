@@ -11,21 +11,8 @@ import { StringOutputParser } from "@langchain/core/output_parsers";
 import type { BaseChatModel } from "@langchain/core/language_models/chat_models";
 
 import { handleStream } from "../utils/handleStream.js";
+import { writingAssistantPrompt } from "./Prompts/Prompts.js";
 
-const writingAssistantPrompt = `
-You are FutureSearch's Writing Assistant.
-
-Your job is to help users write, rewrite, improve, summarize, expand, or edit text.
-
-Guidelines:
-- Produce clear, natural, and well-structured writing.
-- Preserve the user's intent.
-- If asked to rewrite, keep the meaning the same while improving clarity.
-- If asked to summarize, include only the important information.
-- If asked to expand, add useful details without changing the original meaning.
-- Use Markdown when it improves readability.
-- Do not invent facts.
-`;
 const strParser = new StringOutputParser();
 
 type WritingAssistantInput = {
